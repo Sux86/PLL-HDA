@@ -32,7 +32,7 @@ function Acc=HFAPL(source_x,source_y,target_x,target_p,C,target_test_x,target_te
            flag = 1;
     end
         tmp_model_value=0;
-        for ite=1:5
+        for ite=1:10
             [W,H,delta]=update_w(X,source_x,source_y,target_x,target_y,C_tmp,X_decison,lambda,H);
             pre_decision_value=get_decision_value(W,source_y,target_y,H,X,X_tt');
             tmp_acc=calcute_acc(pre_decision_value,target_test_y);
